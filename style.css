@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: #FFE5D9;
+    --main-txt-color: #D8E2DC;
+    --accent-1-color: #FFCAD4;
+    --accent-2-color: #F4ACB7;
+    --accent-3-color: #9D8189;
+
+    --main-font: 'Great Vibes', cursive;
+    --accent-1-font: 'Berkshire Swash', cursive;
+}
+
+html, body {
+    background: var(--main-bg-color);  
+    height: 100%;
+
+}
+
+.container { 
+    height: 100%;
+
+}
+
+
+/* HEADER */
+
+header {
+    height: 65%;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header-bg{
+    position: absolute;
+    z-index: 0;
+
+    height: 100%;
+    width: 100%;
+
+    opacity: .6;
+
+    background: url(./img/woman-bouquet.jpg);
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.banner {
+    position: relative;
+
+    padding: 10px;
+    z-index: 100;
+}
+
+.banner > h1 {
+    font-size: 3em;
+    padding: 3px;
+    text-align: center;
+
+    font-family: var(--accent-1-font);
+    font-weight: 100;
+}
+
+.banner > h1 > span {
+    font-family: var(--main-font);
+    font-weight: 900;
+    display: block;
+}
+
+.header-content {
+    z-index: 100;
+
+    padding: 10px;
+    text-align: center;
+    font-family: var(--accent-1-font);
+    font-size: 2em;
+    font-weight: 100;
+}
+
+.header-content > p > span {
+    display: block;
+}
+
+
+/* Main Section */
+
+section{
+    padding: 10px;
+
+    width: 100%;
+}
+
+.content {
+    z-index: 100;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#rsvp { 
+    z-index: 100;
+    opacity: .8;
+    margin-top: 40px;
+    padding: 3px 7px;
+    font-size: 2em;
+
+    box-shadow: 0 7px var(--accent-2-color);
+
+    border-radius: .2em;
+
+    background: linear-gradient(var(--accent-3-color), var(--accent-2-color));
+
+    color: var(--main-txt-color);
+}
+
+#rsvp:hover {
+    opacity: 1;
+}
+
+#rsvp:active {
+    opacity: 1;
+    transform: translateY(4px);
+    box-shadow: 0 4px var(--accent-1-color);
+}
+
+.info {
+    width: 100%;
+
+    margin-top: 40px;
+}
+
+
+.info ul {
+    list-style: none;
+
+    padding: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info ul li {
+    text-align: center;
+    padding: 7px;
+
+    font-size: 2em;
+}
+
+.info h3 {
+    font-family: var(--accent-1-font);
+}
+
+
+
+/* MODAL */
+
+.x-btn-container {
+    display: inline-block;
+    margin: 30px 10px;
+
+
+
+    transform: rotate(.376turn);
+
+    transition: all 1s ease;
+}
+
+.x-btn{
+    width:45px;
+    height: 2px;
+    background-color: black;
+}
+
+.x-btn-l {
+    transform: translateY(2px);
+}   
+
+.x-btn-r {
+    transform: rotate(.75turn);
+}
+
+.x-btn-close {
+    transform: rotate(5turn)
+}
+
+.modal {
+    z-index: 200;
+
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+
+    top: -1000px;
+
+    background: green;
+
+    transition: all 1s ease;
+}
+
+.active-modal {
+    top: 0px;
+}
